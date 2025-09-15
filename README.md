@@ -5,8 +5,7 @@ It is about:
 Chemistry
 Physics
 Biology
-Israel Project (about me)  
+Israel (country)
 
- About  
 This project shows my learning and ideas in science and also a little about myself.  
 It’s a way for me to grow, improve, and share what I know.
