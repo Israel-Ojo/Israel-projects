@@ -1,221 +1,179 @@
-<!DOCTYPE html>
- <html>
- <head>
-	 <title>Isreal</title>
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	 <meta charset="UTF-8"/>
-	 	 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	 
-	 <link rel="stylesheet" href="css/style.css" type="text/css"/>
-	 
-	 <link rel="stylesheet" href="set.darkmode.css" type="text/css"/>
-	 
- </head>
- 
- <div class="div-header">
- 
-	 <body class="body">
-	 <header class= "flex">
-	 <button onclick="toggleMenu()">☰</button>
-	 
-		 <center>
-<a href="index.html"><img src="img/tech-logo.jpg" style="width:100px; height: 70px; border-radius: 10px; margin-right: 120px;"></a>
-	</center>
- 
-</div>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome - Ojo Israel</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-	</header>
-	
-	
-	<div class="menu" id="menu">
-              <button class="close-btn" onclick="closeMenu()">✖</button>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="html.html">HTML</a>
-            <a href="css.html">CSS</a>
-            <a href="javascript.html">JAVASCRIPT</a>
-        <a href="help&support.html">Help & Support</a>
-               <a href="settings&privacy.html">Settings & privacy</a>
-            <a href="login.html"><button>logout</button></a>
-        </div>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
 
-<script src="darkmode.js"></script>
+    /* Header */
+    header {
+      background: linear-gradient(90deg, #000, #001f33);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 15px #00aaff;
+    }
 
-	<script src="js/script.js"></script>
-	
-	
-	
-	<div class="welcome">
-	
-	<center>
-	<p> <h3> <i class="fa fa-user"> </i> Welcome, Israel </h3> </p>
-	</center>
-	
-	</div>
-	
-	<div class="latest">
-	
-	<center>
-	
-	<p> Latest news on Tech Life </p>
+    header h1 {
+      font-size: 40px;
+      color: #00aaff;
+      text-shadow: 0 0 10px #00aaff, 0 0 20px #0077cc;
+      animation: fadeIn 1.5s ease;
+    }
 
-</center>
+    /* Navbar */
+    nav {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center; /* keeps them centered in one line */
+      gap: 20px; /* space between links */
+      flex-wrap: wrap; /* makes sure they don’t break weirdly on small screens */
+    }
 
-</div>
+    nav a {
+      color: #00aaff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      position: relative;
+      transition: 0.3s;
+    }
 
-	
-	</div>
-	  <div class="section-1">
-	  <center>
-<img src="img/section 1.jpg" style="width:270px; height: 270px; border-radius: 6px;">
+    nav a::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 0;
+      background: #00aaff;
+      margin: auto;
+      transition: width 0.3s;
+    }
 
-	<p>I’m a passionate frontend developer who loves creating smooth, clean, and responsive websites.</p>
-	</center>
-	
-<div style="display: flex; justify-content: space-between;">
+    nav a:hover::after {
+      width: 100%;
+    }
 
-	<i class="fas fa-thumbs-up"> </i>
+    nav a:hover {
+      color: #66d9ff;
+      text-shadow: 0 0 10px #00aaff;
+    }
 
-<i class="fas fa-comment"> </i>
+    /* Main Section */
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      height: 80vh;
+      padding: 20px;
+      animation: slideUp 1.5s ease;
+    }
 
-<i class="fas fa-link"> </i>
+    .hero h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #00aaff;
+    }
 
-	</div>
-	
-</div>
+    .button {
+      display: inline-block;
+      padding: 12px 30px;
+      background: transparent;
+      color: #00aaff;
+      border: 2px solid #00aaff;
+      border-radius: 8px;
+      font-size: 18px;
+      text-decoration: none;
+      margin-top: 15px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00aaff;
+    }
 
-   <div class="section-2">
-<center>
-<img src="img/section 2.jpg" style="width:270px; height: 270px; border-radius: 6px;"
-</center>
+    .button:hover {
+      background: #00aaff;
+      color: #0d0d0d;
+      box-shadow: 0 0 20px #00aaff, 0 0 40px #0077cc;
+      transform: scale(1.05);
+    }
+    
+    /* Footer */
+    footer {
+      background: #001f33;
+      text-align: center;
+      padding: 15px;
+      color: #aaa;
+      font-size: 14px;
+      box-shadow: 0 -2px 15px #00aaff;
+    }
 
-<center>
-<p>I use only HTML, CSS, and JavaScript to build everything you see — no backend, no server-side code, just frontend magic.</p>
-</center>
+    footer strong {
+      color: #00aaff;
+    }
+    
+       .page {
+      background: #001f33;
+      text-align: center;
+      padding: 15px;
+      color: #aaa;
+      font-size: 14px;
+      border-radius: 10px;
+      box-shadow: 0 -2px 15px #00aaff;
+    }
+    
 
-	<div style="display: flex; justify-content: space-between;">
-	<i class="fas fa-thumbs-up"> </i>
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-<i class="fas fa-comment"> </i>
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
 
-<i class="fas fa-link"> </i>
+  <header>
+    <h1>👋 Welcome to My First Website</h1>
+    <nav>
+      <a href="chemistry.html">Chemistry</a>
+      <a href="physics.html">Physics</a>
+      <a href="biology.html">Biology</a>
+      <a href="israel.html">Israel</a>
+    </nav>
+  </header>
+  
+  <center>
+ <div class="page">
+   <img src="img/Israel (1).jpg" style="width: 270px; height: 300px; border-radius: 10px;">
+   </div>
+   </center>
 
-	</div>
+  <main class="hero">
+    <h2>This is the homepage of my very first website 🚀</h2>
+    <p>Made with love, upgraded with style ✨</p>
+    <a href="chemistry.html" class="button">Start with Chemistry</a>
+  </main>
 
-</div>
+  <footer>
+    © 2025 <strong>Ojo Israel</strong>. All Rights Reserved.
+  </footer>
 
-  <div class="section-3">
-<center>
-<img src="img/section 3.jpg" style="width:270px; height: 270px; border-radius: 6px;">
-
-<p>From simple landing pages to more advanced UI designs, I focus on making sure everything works well on phones, tablets, and desktops.</p>
-</center>
-
-	<div style="display: flex; justify-content: space-between;">
-	<i class="fas fa-thumbs-up"> </i>
-
-<i class="fas fa-comment"> </i>
-
-<i class="fas fa-link"> </i>
-
-	</div>
-
-</div>
-
- <div class="section-4">
-<center>
-<div class="section" style="--delay: 4.0s">
-<img src="img/sectional4.jpg" style="width:260px; height: 260px; border-radius: 6px;">
-</center>
-
-<center>
-<p>Animations, layout, buttons, transitions  every little detail matters to me because user experience is everything.</p>
-</center>
-
-	<div style="display: flex; justify-content: space-between;">
-	<i class="fas fa-thumbs-up"> </i>
-
-<i class="fas fa-comment"> </i>
-
-<i class="fas fa-link"> </i>
-
-	</div>
-
-</div>
-</div>
-
-   <div class="section-5">
-<center>
-<img src="img/section 5.jpg" style="width:270px; height: 270px; border-radius: 6px;">
-
-<p> Frontend is more than just code. It’s creativity, flow, and turning ideas into something people can touch and feel right on the screen.</p>
-</center>
-<div style="display: flex; justify-content: space-between;">
-	<i class="fas fa-thumbs-up"> </i>
-
-<i class="fas fa-comment"> </i>
-
-<i class="fas fa-link"> </i>
-
-	</div>
-	
-	</div>
-	</div>
-	
-	
-	<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    min-height: 100vh;       /* full height */
-    display: flex;
-    flex-direction: column;  /* stack content + footer */
-    font-family: Arial, sans-serif;
-  }
-
-  .content {
-    flex: 1;  /* pushes footer to bottom */
-    padding: 20px;
-  }
-
-  .footer {
-    background: #111;
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-  }
-
-  .display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .footer-title {
-    margin: 0;
-    color: #0000ff;
-  }
-
-  .footer-text {
-    margin: 5px 0 0;
-    color: #0000ff;
-  }
-</style>
-
-<div class="content">
-  <p style="margin-bottom: 2px;"></p>
-</div>
-
-<footer class="footer">
-  <div class="footer-content">
-    <img src="img/tech-logo.jpg" style="width:80px; height:50px; border-radius:10px;">
-    <h2 class="footer-title">Tech Life</h2>
-  </div>
-  <p class="footer-text">TECH LIFE Coming to take over the future.</p>
-</footer>
-	 </body>
- </html>
+</body>
+</html>
