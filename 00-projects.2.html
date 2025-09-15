@@ -1,149 +1,175 @@
 <!DOCTYPE html>
- <html>
- <head>
-	 <title>Isreal</title>
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	 <meta charset="UTF-8"/>
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	 <link rel="stylesheet" href="css/style.css" type="text/css"/>
-	 
-	 <link rel="stylesheet" href="set.darkmode.css" type="text/css"/>
-	 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemistry - Ojo Israel</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      margin: 0;
+      line-height: 1.6;
+    }
 
-	 
- </head>
- 
- 	  <div class="div-header">
- 
-	 	 <body class="body">
-	 <header class= "flex">
-	 <button onclick="toggleMenu()">☰</button>
-	
-	 <center>
-<a href="index.html"><img src="img/logo.jpg" style="width:100px; height: 70px; border-radius: 10px; margin-right: 120px;"></a>
-	</center>
-	
-	
-	</div>
-	
-	</header>
-	
-	
-	
-	
-	<div class="menu" id="menu">
-	     <button class="close-btn" onclick="closeMenu()">✖</button>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="html.html">HTML</a>
-            <a href="css.html">CSS</a>
-            <a href="javascript.html">JAVASCRIPT</a>
-            <a href="help&support.html">Help & support</a>
-            <a href="settings&privacy.html">Settings & Privacy</a>
-                 <a href="login.html"><button>logout</button></a>
-        </div>
-	<script src="js/script.js"></script>
-	<script src="darkmode.js"></script>
-	
-<div class="tech1">
-<center>
-<p><h2> Tech Life</h2></p>
-</center>
-</div>
+    header {
+      background: linear-gradient(90deg, #000, #001f33);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 15px #00aaff;
+    }
 
-<div class="tech2">
-<center>
-<p>At Tech Life, we're passionate about empowering individuals with the skills to succeed in the digital world.</p>
-</center>
-</div>
+    header h1 {
+      font-size: 36px;
+      color: #00aaff;
+      text-shadow: 0 0 10px #00aaff, 0 0 20px #0077cc;
+      animation: fadeIn 1.5s ease;
+    }
 
-<div class="tech2">
-<center>
-<p>Our mission is to provide high-quality education and resources in programming languages like JavaScript, HTML, and CSS.</p>
-</center>
-</div>
+    nav {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-<div class="tech2">
-<center>
-<p><h3>Our Story</h3></p>
-<p>Tech Life was founded by a team of experienced developers and educators who wanted to make technology more accessible to everyone.</p>
-</center>
-</div>
+    nav a {
+      color: #00aaff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      position: relative;
+      transition: 0.3s;
+    }
 
-<div class="tech2">
-<center>
-<p>We believe that coding is an essential skill for the future, and we're committed to helping people of all ages and backgrounds learn and grow.</p>
-</center>
-</div>
+    nav a::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 0;
+      background: #00aaff;
+      margin: auto;
+      transition: width 0.3s;
+    }
 
-<div class="tech2">
-<center>
-<p><h3>What We Offer</h3></p>
-</center>
-</div>
+    nav a:hover::after {
+      width: 100%;
+    }
 
-<div class="tech2">
-<center>
-<p><h4>JavaScript Tutorials:</h4>
-Learn the fundamentals of JavaScript and take your coding skills to the next level.</p>
-</center>
-</div>
+    nav a:hover {
+      color: #66d9ff;
+      text-shadow: 0 0 10px #00aaff;
+    }
 
-<div class="tech2">
-<center>
-<p><h4>HTML & CSS Courses:</h4>
-Master the building blocks of the web and create stunning websites and applications.</p>
-</center>
-</div>
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      animation: slideUp 1.5s ease;
+    }
 
-<div class="tech2">
-<center>
-<p><h4>Expert Guidance:</h4> Our experienced instructors are here to support you every step of the way.</p>
-</center>
-</div>
+    h2 {
+      color: #00aaff;
+      margin-bottom: 20px;
+    }
 
-<div class="tech2">
-<center>
-<p><h4>Community Support:</h4> Join our community of learners and connect with like-minded individuals.</p>
-</center>
-</div>
+    p {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
 
-<div class="tech2">
-<center>
-<p><h4>Get Started Today!!!</h4></p>
-</center>
-</div>
+       .page {
+      background: #001f33;
+      text-align: center;
+      padding: 15px;
+      color: #aaa;
+      font-size: 14px;
+      border-radius: 10px;
+      box-shadow: 0 -2px 15px #00aaff;
+    }
+    
 
-<div class="tech2">
-<center>
-<p><h4>Ready to start your coding journey?</h4>
-</center>
-</div>
+    footer {
+      background: #001f33;
+      text-align: center;
+      padding: 15px;
+      color: #aaa;
+      font-size: 14px;
+      box-shadow: 0 -2px 15px #00aaff;
+    }
 
-<div class="tech2">
-<center>
-Browse our courses and tutorials now and take the first step towards a brighter future.</p>
-</center>
-</div>
+    footer strong {
+      color: #00aaff;
+    }
 
-<div class="tech3">
-<center>
-<p><h4>To get in touch with tech life</h4></p>
-	<p>	<i class="fa fa-envelope"></i>  [israelojo899@gmail.com]
-	          or [ojooluwasegun755@gmail.com]</p>
-	           </center>
-	</div>
-	
-<div class="tech4">
-<center>
-<i class="fab fa-linkedin"></i>
-<i class="fab fa-facebook"></i>
-<i class="fab fa-twitter"></i>
-<i class="fab fa-instagram"></i>
-<i class="fab fa-quora"></i>
-</center>
-</div>
-	
-	
-	 </body>
- </html>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🔬 Chemistry</h1>
+    <nav>
+      <a href="project.html">Home</a>
+      <a href="physics.html">Physics</a>
+      <a href="biology.html">Biology</a>
+      <a href="israel.html">Israel</a>
+    </nav>
+  </header>
+
+
+  <main>
+    <h2>Introduction to Chemistry</h2>
+    
+      <center>
+ <div class="page">
+   <img src="img/chemistry (1).jpg" style="width: 270px; height: 300px; border-radius: 10px;">
+   </div>
+   </center>
+   
+    
+    <p>Chemistry is the study of matter — its properties, composition, and the changes it undergoes.</p>
+    
+      <center>
+ <div class="page">
+   <img src="img/chemistry (2).jpg" style="width: 270px; height: 300px; border-radius: 10px;">
+   </div>
+   </center>
+
+    
+    <p>It helps us understand the building blocks of the universe 🌌, from atoms and molecules to reactions that power life.</p>
+    
+      <center>
+ <div class="page">
+   <img src="img/chemistry (3).jpg" style="width: 270px; height: 300px; border-radius: 10px;">
+   </div>
+   </center>
+
+    
+    <p>On this page, I’ll share my notes, lessons, and experiments about Chemistry as I learn and grow. 🚀</p>
+    
+      <center>
+ <div class="page">
+   <img src="img/chemistry (4).jpg" style="width: 270px; height: 300px; border-radius: 10px;">
+   </div>
+   </center>
+
+    
+  </main>
+
+  <footer>
+    © 2025 <strong>Ojo Israel</strong>. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
