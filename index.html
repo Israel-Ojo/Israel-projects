@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome - Ojo Israel</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, #000, #001f33);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 15px #00aaff;
+    }
+
+    header h1 {
+      font-size: 40px;
+      color: #00aaff;
+      text-shadow: 0 0 10px #00aaff, 0 0 20px #0077cc;
+      animation: fadeIn 1.5s ease;
+    }
+
+    /* Navbar */
+    nav {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center; /* keeps them centered in one line */
+      gap: 20px; /* space between links */
+      flex-wrap: wrap; /* makes sure they don’t break weirdly on small screens */
+    }
+
+    nav a {
+      color: #00aaff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    nav a::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 0;
+      background: #00aaff;
+      margin: auto;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: #66d9ff;
+      text-shadow: 0 0 10px #00aaff;
+    }
+
+    /* Main Section */
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      height: 80vh;
+      padding: 20px;
+      animation: slideUp 1.5s ease;
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #00aaff;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 30px;
+      background: transparent;
+      color: #00aaff;
+      border: 2px solid #00aaff;
+      border-radius: 8px;
+      font-size: 18px;
+      text-decoration: none;
+      margin-top: 15px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00aaff;
+    }
+
+    .button:hover {
+      background: #00aaff;
+      color: #0d0d0d;
+      box-shadow: 0 0 20px #00aaff, 0 0 40px #0077cc;
+      transform: scale(1.05);
+    }
+    
+    /* Footer */
+    footer {
+      background: #001f33;
+      text-align: center;
+      padding: 15px;
+      color: #aaa;
+      font-size: 14px;
+      box-shadow: 0 -2px 15px #00aaff;
+    }
+
+    footer strong {
+      color: #00aaff;
+    }
+    
+       .page {
+      background: #001f33;
+      text-align: center;
+      padding: 15px;
+      color: #aaa;
+      font-size: 14px;
+      border-radius: 10px;
+      box-shadow: 0 -2px 15px #00aaff;
+    }
+    
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>👋 Welcome to My First Website</h1>
+    <nav>
+      <a href="chemistry.html">Chemistry</a>
+      <a href="physics.html">Physics</a>
+      <a href="biology.html">Biology</a>
+      <a href="israel.html">Israel</a>
+    </nav>
+  </header>
+  
+  <center>
+ <div class="page">
+   <img src="project-images/Israel (1).jpg" style="width: 270px; height: 300px; border-radius: 10px;">
+   </div>
+   </center>
+
+  <main class="hero">
+    <h2>This is the homepage of my very first website 🚀</h2>
+    <p>Made with love, upgraded with style ✨</p>
+    <a href="chemistry.html" class="button">Start with Chemistry</a>
+  </main>
+
+  <footer>
+    © 2025 <strong>Ojo Israel</strong>. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
